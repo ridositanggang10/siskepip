@@ -1,0 +1,304 @@
+Source Code here  
+
+
+Controller
+
+PageController.php
+
+==================================================================
+
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Stroage;
+
+
+
+use App\Models\Product;
+
+
+
+
+class PageController extends Controller
+{
+   public function index()
+   {
+   	
+   	return view('welcome');
+
+   }
+
+    public function uploadpage()
+   {
+   	
+   	return view('product');
+
+   }
+
+     public function store(Request $request)
+   {
+
+   		$data=new product();
+   	
+   	  
+			$file=$request->file;
+		        
+	$filename=time().'.'.$file->getClientOriginalExtension();
+
+		        $request->file->move('assets',$filename);
+
+		        $data->file=$filename;
+
+
+		        $data->name=$request->name;
+		        $data->description=$request->description;
+
+		        $data->save();
+		        return redirect()->back();
+
+
+
+   }
+
+
+   public function show()
+   {
+
+   	$data=product::all();
+   	return view('showproduct',compact('data'));
+   }
+
+
+      public function download(Request $request,$file)
+   {
+
+   	
+return response()->download(public_path('assets/'.$file));
+   }
+
+
+
+   public function view($id)
+   {
+   	$data=Product::find($id);
+
+   	return view('viewproduct',compact('data'));
+
+
+   }
+
+
+
+   
+
+
+
+ 
+}
+
+
+
+
+=============================================================================
+
+Models
+
+Document.php
+
+=====================================================================
+
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Document extends Model
+{
+
+	
+    use HasFactory;
+
+    protected $fillable=['name','description','file'];
+}
+
+
+
+===============================================================
+
+
+Route
+web.php
+
+===================================================
+
+
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\PageController;
+
+
+
+
+
+Route::get('/',[PageController::class,'index']);
+
+Route::get('/uploadpage',[PageController::class,'uploadpage']);
+
+Route::post('/uploadproduct',[PageController::class,'store']);
+
+
+Route::get('/show',[PageController::class,'show']);
+
+Route::get('/download/{file}',[PageController::class,'download']);
+
+Route::get('/view/{is}',[PageController::class,'view']);
+
+
+
+
+
+
+
+
+
+=================================================================
+
+
+
+Views
+===========================================================
+product.blade.php
+
+===================================================
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<form action="{{url('uploadproduct')}}" method="post" enctype="multipart/form-data">
+
+		@csrf
+
+	<input type="text" name="name" placeholder="Product Name">
+
+	<input type="text" name="description" placeholder="Product description">
+
+	<input type="file" name="file">
+
+	<input type="submit" >
+
+
+	</form>
+
+</body>
+</html>
+
+
+
+=======================================================
+
+
+showproduct.blade.php
+
+
+=======================================================
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<table border="1px">
+
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>View</th>
+		<th>Download</th>
+	</tr>
+
+	@foreach($data as $data)
+
+	<tr>
+		<td>{{$data->name}}</td>
+		<td>{{$data->description}}</td>
+		<td><a href="{{url('/view',$data->id)}}">View</a></td>
+		<td><a href="{{url('/download',$data->file)}}">Download</a></td>
+
+
+	</tr>
+	
+
+
+
+	@endforeach
+
+	</table>
+
+</body>
+</html>
+
+
+
+=======================================================
+
+
+viewproduct.blade.php
+
+=======================================================
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	{{$data->name}}
+	{{$data->description}}
+
+	<iframe height="400"  width="400" src="/assets/{{$data->file}}"></iframe>
+
+</body>
+</html>
+
+
+
+=======================================================
+
+
+welcome.blade.php
+
+
+=======================================================
+
+
+ </div>
+
+
+                <h1>Welcome to Laravel Tutorial</h1>
+                <div>
+                    <h2>How To Upload , View , Download Pdf,Docx,Video ,Mp3 In Laravel</h2>
+                </div>
+
+
+               <a class="btn btn-success" href="{{url('/uploadpage')}}">Upload Page</a>
+               
+                
+            </div>

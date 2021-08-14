@@ -1,0 +1,133 @@
+body {
+  font-family: 'Karla', sans-serif;
+  background-image: url("../images/masyarakat_humbahas.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+  padding-bottom: 75px; }
+  @media (min-width: 768px) {
+    body {
+      padding-bottom: 110px; } }
+
+.navbar-brand {
+  margin-right: 0; }
+  .navbar-brand img {
+    height: 50px;
+  }
+
+.navbar-dark {
+  padding-top: 35px;
+  padding-bottom: 35px; }
+  .navbar-dark .navbar-text {
+    color: #ffffff;
+    background-color: darkorange;
+    opacity: 5;
+    height: 30px; 
+    border-radius: 5px 5px 5px 5px;
+    padding: 0 30px;
+    border-right: 1px solid #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; }
+    .navbar-dark .navbar-text:last-child {
+      border-right: 0; }
+  @media (max-width: 767px) {
+    .navbar-dark {
+      padding-bottom: 0; } }
+
+.page-title {
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 6px; }
+  @media (max-width: 767px) {
+    .page-title {
+      font-size: 35px;
+      margin-bottom: 14px; } }
+
+.page-description {
+  max-width: 800px;
+  font-size: 20px;
+  color: darkorange;
+  margin-bottom: 59px; }
+  @media (max-width: 800px) {
+    .page-description {
+      font-size: 16px; } }
+
+p {
+  font-size: 14px;
+  margin-bottom: 21px; }
+
+.footer-social-links .social-link {
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #39A2DB;
+  color: #ffff;
+  margin-left: 16px;
+  transition: all 0.3s ease-in-out; }
+  .footer-social-links .social-link:last-child {
+    margin-right: 0; }
+  .footer-social-links .social-link:hover {
+    text-decoration: none;
+    color: #000000; }
+
+/*# button */
+a.main-button-slider {
+  font-size: 16px;
+  padding: 15px 40px;
+  background-color: #f39c12;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+a.main-button-slider:hover {
+  background-color: #337ab7;
+}
+
+a.main-button {
+  font-size: 13px;
+  border-radius: 20px;
+  padding: 12px 20px;
+  background-color: #00b4c6;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+a.main-button:hover {
+  background-color: #0088e8;
+}
+
+button.main-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: #f39c12;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+button.main-button:hover {
+  background-color: #0088e8;
+}

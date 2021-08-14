@@ -1,0 +1,19 @@
+Why are you applying for Financial Aid? (150 words minimum required)
+How will taking this course help you achieve your career goals? (150 words minimum required)
+
+
+1. Saya adalah seorang mahasiswa computer science yang sedang menjalani kuliah pada tahun terakhir,
+   sebagai seorang anak pertama, orang tua saya menuntut agar saya mendapat pekerjaan setelah nanti saya lulus kuliah
+   namun saya sadar dengan hanya berbekal pengetahuan selama kuliah tidak akan mendukung karir saya nantinya, 
+   dan saya memutuskan untuk akan mengikuti beberapa kursus online namun sayangnya untuk mengikuti kursus online saya harus mengeluarkan banyak uang
+   sedangkan saya datang dari negara berpenghasilan menengah kebawah, untuk masyarakat di negara saya tidak akan mampu membayar harga kursus yang sangat mahal
+   saya harap dengan diterimanya permohonan financial aid ini, saya dapat mengembangkan pengetahuan saya dan bisa mendapatkan pekerjaan impian saya dimasa depan
+   Selain itu saya memiliki impian untuk bisa berbagi ilmu yang saya dapatkan kepada anak-anak yang kurang beruntung dinegara saya, dikarenakan banyak anak-anak miskin yang tidak bisa mendapatkan pendidikan yang baik, atau bahkan tidak pernah bersekolah karena tidak memiliki uang untuk bersekolah padahal jika ditinjau secara data banyak anak-anak pintar yang dilahirkan dinegara saya
+   namun memilih pindah keluar negeri untuk mendapatkan pendidikan yang lebih baik oleh karena itu saya bercita-cita untuk bisa membangun sebuah institusi pendidikan bagi anak-anak yang kurang mampun.
+
+
+2. Dengan mengikuti kursus ini, saya akan semakin memperdalam bidang ilmu yang saya tekuni sehingga kemampuan saya akan semakin berkembang terutama pada bidang Quality Assurance dan juga Quality testing
+   Kurangnya sumber pembelajaran yang ada di internet membuat beberapa orang yang menekuni Quality Assurance atau Software Testing merasa kesulitan terutama dalam melakukan prosedur pengujian dan Automated testing
+   dengan mengikuti course ini saya harap saya bisa belajar banyak dan mendapat insights baru untuk diterapkan pada dunia kerja dan mendukung pada pendidikan saya terutama pada penelitian yang akan saya lakukan sebagai syarat untuk mendapatkan gelar sarjana 
+   
+
