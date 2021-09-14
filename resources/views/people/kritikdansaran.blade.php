@@ -39,12 +39,14 @@
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Jenis Kelamin
                                     <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
+                                        <option selected disabled>-- Pilih Salah Satu --</option>
                                         <option value="Pria">Laki-laki</option>
                                         <option value="Wanita">Perempuan</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Usia
                                     <select name="usia" id="usia" class="form-control">
+                                        <option selected disabled>-- Pilih Salah Satu --</option>
                                         <option value="1">15 - 20 tahun</option>
                                         <option value="2">21 - 25 tahun</option>
                                         <option value="3">26 - 30 tahun</option>
@@ -58,13 +60,14 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Nomor Telepon Aktif
-                                    <input type="tel" name="nomor_telepon" id="nomor_telepon" class="form-control" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}">
+                                    <input type="tel" name="nomor_telepon" id="nomor_telepon" class="form-control" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" placeholder="Contoh : 0823-8080-4546">
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Alamat Tinggal Saat ini
                                     <input type="text" name="alamat" id="alamat" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Pendidikan Terakhir
                                     <select name="pendidikan_terakhir" id="pendidikan_terakhir" class="form-control">
+                                        <option selected disabled>-- Pilih Salah Satu --</option>
                                         <option value="paud/tk">Pendidikan Anak Usia Dini / Taman Kanak-kanak</option>
                                         <option value="sd">Sekolah Dasar</option>
                                         <option value="smp">Sekolah Menengah Pertama</option>
@@ -83,6 +86,7 @@
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Pilih Instansi Tujuan
                                     <select name="ks_instansi_id" id="ks_instansi_id" class="form-control">
+                                        <option selected disabled>-- Pilih Salah Satu --</option>
                                         @foreach ($data as $datas)
                                         <option value="{{$datas->id}}">{{$datas->instansi_name}}</option>
                                         @endforeach

@@ -22,7 +22,7 @@ class CreateRedirectKritikDanSaranTable extends Migration
             $table->char('rkds_instansi_id');
             $table->foreign('rkds_instansi_id', 'rkds_instansi_id_fk_4321606')->references('id')->on('instansi')->onDelete('cascade');
             $table->text('pesan');
-            $table->string('foto');
+            $table->string('foto')->nullable();
             $table->string('status');
             $table->timestamps();
         });

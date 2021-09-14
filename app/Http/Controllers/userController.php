@@ -319,9 +319,10 @@ class userController extends Controller
                     ->select('*')
                     ->where([
                         ['ra_instansi_id',Auth::user()->instansiID],
-                        ['status','pending']
+                        ['status','pending'],
                         ])
                     ->orWhere('status', 'accepted')
+                    ->orWhere('status','rejected')
                     ->orderBy('created_at', 'desc')
                     ->get();
 
@@ -560,12 +561,13 @@ class userController extends Controller
                             ->where('id',$id)
                             ->get();
 
+                            
         foreach($get_kds_data as $items){
             $data = new redirectKritikDanSaran();
             $data->rkds_old_id = $items->id;
             $data->rkds_masyarakat_id = $items->masyarakat_id ;
-            $data->rkds_instansi_id = $items->ks_instansi_id;
-            $data->instansi_baru = $request->get('instansi_baru');
+            // $data->rkds_instansi_id = $items->ks_instansi_id;
+            $data->rkds_instansi_id = $request->get('instansi_baru');
             $data->foto = $items->foto;
             $data->pesan = $items->pesan;
             $data->status = 'pending';
@@ -616,7 +618,7 @@ class userController extends Controller
     public function showRedirectKritikDanSaran(){
         $data = DB::table('redirect_kritik_dan_saran')
                     ->select('*')
-                    ->where('instansi_baru',Auth::user()->instansiID)
+                    ->where('rkds_instansi_id',Auth::user()->instansiID)
                     -> paginate(5);
         return view('user.kritik_dan_saran.redirect-kritik-dan-saran',['data'=>$data]);
     }
@@ -627,8 +629,15 @@ class userController extends Controller
             ->update([
                 'status' => "accepted"
             ]);
-
-            return Redirect::to('/kritik-dan-saran/redirect-lists');
+        
+        foreach($data = DB::table('redirect_kritik_dan_saran')->where('id',$id)->get() as $datas){
+            DB::table('kirik_dan_saran')
+            ->where('id',$datas->rkds_old_id)
+            ->update([
+                'status' => 'accepted'
+            ]);
+        }
+        return Redirect::to('/kritik-dan-saran/redirect-lists');
     }
 
     public function rejectRedirectedKritikdanSaran($id) {

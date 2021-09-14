@@ -17,34 +17,12 @@ class instansiSeeder extends Seeder
     {
         DB::table('instansi')->insert([
             [
-                 'id' => Str::uuid()->toString(),
-                'instansi_name' => 'Dinas Komunikasi dan Informatika',
-                 'instansi_address' => 'Komplek Perkantoran Tano Tubu Km.3.3, Tano Tubu, Pasaribu, Dolok sanggul, Kabupaten Humbang Hasundutan, Sumatera Utara 22457',
-                 'instansi_website_link' => 'https://diskominfo.humbanghasundutankab.go.id',
-                 'instansi_descriptions' => 'Dinas Komunikasi dan Informatika Kabupaten Humbang Hasundutan'
-            ],
-            [
                 'id' => Str::uuid()->toString(),
-                'instansi_name' => 'Dinas Pendidikan',
+                'instansi_name' => 'DISKOMINFO',
                 'instansi_address' => 'Komplek Perkantoran Tano Tubu Km.3.3, Tano Tubu, Pasaribu, Dolok sanggul, Kabupaten Humbang Hasundutan, Sumatera Utara 22457',
-                'instansi_website_link' => 'https://dispen.humbanghasundutankab.go.id/',
+                'instansi_website_link' => 'https://diskominfo.humbanghasundutankab.go.id',
                 'instansi_descriptions' => 'Dinas Komunikasi dan Informatika Kabupaten Humbang Hasundutan'
             ],
-            [
-                'id' => Str::uuid()->toString(),
-                'instansi_name' => 'Dinas Kesehatan',
-                'instansi_address' => 'Komplek Perkantoran Tano Tubu Km.3.3, Tano Tubu, Pasaribu, Dolok sanggul, Kabupaten Humbang Hasundutan, Sumatera Utara 22457',
-                'instansi_website_link' => 'https://dinkes.humbanghasundutankab.go.id/',
-                'instansi_descriptions' => 'Dinas Komunikasi dan Informatika Kabupaten Humbang Hasundutan'
-            ],
-            [
-                'id' => Str::uuid()->toString(),
-                'instansi_name' => 'Dinas Sosial',
-                'instansi_address' => 'Komplek Perkantoran Tano Tubu Km.3.3, Tano Tubu, Pasaribu, Dolok sanggul, Kabupaten Humbang Hasundutan, Sumatera Utara 22457',
-                'instansi_website_link' => 'https://dinsos.humbanghasundutankab.go.id/',
-                'instansi_descriptions' => 'Dinas Komunikasi dan Informatika Kabupaten Humbang Hasundutan'
-            ]
-            
         ]);
     }
 }

@@ -42,8 +42,7 @@
                                 </div>
                                 <div class="box-footer clearfix no-border">
                                     <a href="{{ url('/standar-layanan/create-stdl') }}"><button
-                                            class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add
-                                            Item</button></a>
+                                            class="btn btn-default pull-right"><i class="fa fa-plus"></i>Tambah</button></a>
                                 </div>
                             </div>
                         </div>

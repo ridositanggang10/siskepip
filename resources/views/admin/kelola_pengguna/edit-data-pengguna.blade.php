@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="box box-w">
-                        <div class="box-header">
+                        {{-- <div class="box-header">
                             <h3 class="box-title">Ubah Role</h3>
                             @include('alert')
                         </div><!-- /.box-header -->
@@ -83,7 +83,7 @@
                                     </button>
                                 </div>
                             </form>
-                        </div>
+                        </div> --}}
                         <div class="box-footer">
                             <div class="pull-left">
                                 <a href="{{url('/kelola-pengguna/all-user')}}" style="text-decoration: none;">

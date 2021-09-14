@@ -38,7 +38,7 @@
                                     <div class="mailbox-read-message">
                                             {!!$item->pesan!!}
                                         
-                                        
+               
                                     </div><!-- /.mailbox-read-message -->
                                 </div><!-- /.box-body -->
                                 @if ($item->foto)

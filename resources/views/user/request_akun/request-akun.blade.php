@@ -75,7 +75,7 @@
                                                                 <th>Waktu Request</th>
                                                                 <th>Nama</th>
                                                                 <th>Email</th>
-                                                                <th>Password</th>
+                                                            
                                                                 <th>Status</th>
                                                                 <th colspan="2" style="text-align:center">Aksi</th>
                                                             </tr>
@@ -100,13 +100,7 @@
                                                                     </td>
 
                                                                     @if ($sts != 'accepted' && $sts != 'rejected' )
-                                                                    <td>
-                                                                        <a href="" class="btn btn-default btn-sm"
-                                                                            data-toggle="modal" data-target="#myModal">
-                                                                            <i class="fa fa-edit" data-toggle="tooltip"
-                                                                                title="Update"></i>
-                                                                        </a>
-                                                                    </td>
+                                                                    
                                                                     <!-- Modal -->
                                                                     <div class="modal fade" id="myModal" tabindex="-1"
                                                                         role="dialog" aria-labelledby="myModalLabel"

@@ -30,8 +30,8 @@
                                             <th>Nama Lengkap</th>
                                             <th>Alamat Email</th>
                                             <th>Instansi</th>
-                                            <th>Role</th>
-                                            <th>Bergabung Sejak</th>
+                                            {{-- <th>Role</th>
+                                            <th>Bergabung Sejak</th> --}}
                                             <th>Kelola</th>
                                         </tr>
                                     </thead>
@@ -44,16 +44,16 @@
                                                 @foreach ($collection = DB::table('instansi')->where('id', $user_datas->instansiID)->get() as $item)
                                                     <td>{{ $item->instansi_name }}</td>
                                                 @endforeach
-                                                @foreach ($instansi = DB::table('role_user')->select('*')->where('user_id', $user_datas->id)->get() as $instansi_collection)
+                                                {{-- @foreach ($instansi = DB::table('role_user')->select('*')->where('user_id', $user_datas->id)->get() as $instansi_collection)
                                                     @if ($instansi_collection->role_id == 1)
                                                         <td>Admin</td>
                                                     @else
                                                         <td>User</td>
                                                     @endif
                                                 @endforeach
-                                                <td>{{ $user_datas->created_at }}</td>
+                                                <td>{{ $user_datas->created_at }}</td> --}}
                                                 <td>
-                                                  <a href="{{ url('kelola-pengguna/show-edit-form/'.$user_datas->id)}}" style="text-decoration: none"><button class="btn btn-primary"><i class="fa fa-edit"> Edit</i></button></a>
+                                                  <a href="{{ url('kelola-pengguna/show-edit-form/'.$user_datas->id)}}" style="text-decoration: none"><button class="btn btn-primary"><i class="fa fa-eye"> Lihat</i></button></a>
                                                   <a href="{{ url('kelola-pengguna/delete-user/'.$user_datas->id)}}" style="text-decoration: none"><button class="btn btn-danger"><i class="fa fa-trash"> Hapus</i></button></a>
                                                 </td>
                                             </tr>
